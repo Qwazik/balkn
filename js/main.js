@@ -1,8 +1,8 @@
 //menu
 
 
-var menu = $('#mainMenu'),
-    fixedStart = $('.top__right').height();
+var menu = $('.header__top'),
+    fixedStart = $('.start').offset().top;
     menuItems = [];
     $(menu).find('a').each(function(){
         var i = $(this).attr('href');
@@ -14,7 +14,7 @@ checkMenu();
 $(window).scroll(function(){
     checkMenu();
     if($(document).outerHeight() - $(window).height() == $(window).scrollTop()){
-        console.log($(document).outerHeight() - $(window).height() == $(window).scrollTop());
+       
         $(menu).find('a').removeClass('active');
         $('a[href="#kontakti"], a[href="#otzivi"]').addClass('active');
     }else{
@@ -25,15 +25,16 @@ $(window).scroll(function(){
 
 function checkMenu(){
         if ($(window).scrollTop() >= fixedStart) {
-        $(menu).addClass('menu-fixed');
+        $('.menu-fixed').show();
     }else{
-        $(menu).removeClass('menu-fixed')
+        
+        $('.menu-fixed').hide();
     }
 }
 
 function checkSection(){
     $(''+menuItems+'').each(function(){
-        var topEdge = $(this).offset().top - 75,
+        var topEdge = $(this).offset().top - 54,
             bottomEdge = topEdge + $(this).height(),
             wScroll = $(window).scrollTop();
         if (topEdge < wScroll && bottomEdge > wScroll) {
@@ -162,7 +163,7 @@ function toggleAddress(){
 jQuery(document).ready(function() {
     jQuery("a.scrollto").click(function () {
         elementClick = jQuery(this).attr("href")
-        destination = jQuery(elementClick).offset().top - 73;
+        destination = jQuery(elementClick).offset().top - 53;
         jQuery("html:not(:animated),body:not(:animated)").animate({scrollTop: destination}, 1100);
         return false;
     });
@@ -269,61 +270,61 @@ var price = new Object();
 //крыша
 price['roof1'] = 0;
 
-price['roof2'] = 100;
-price['roof3'] = 200;
+price['roof2'] = 1;
+price['roof3'] = 1;
 
 //остекление 
 
-price['okno1'] = 300;
-price['okno2'] = 400;
+price['okno1'] = 1;
+price['okno2'] = 1;
 //обшивка
 price['shell1'] = 0;
-price['shell2'] = 500;
-price['shell3'] = 600;
+price['shell2'] = 1;
+price['shell3'] = 1;
 
 
 //кладка
 price['struct1'] = 0;
-price['struct2'] = 700;
+price['struct2'] = 1;
 //пвх вагонка
 
-price['otdelka1'] = 800;
-price['otdelka2'] = 900;
-price['otdelka3'] = 1000;
-price['otdelka4'] = 1100;
-price['otdelka5'] = 1200;
+price['otdelka1'] = 1;
+price['otdelka2'] = 1;
+price['otdelka3'] = 1;
+price['otdelka4'] = 1;
+price['otdelka5'] = 1;
 //пвх вагонка широкая
 
 
-price['otdelka6'] = 1300;
-price['otdelka7'] = 1400;
-price['otdelka8'] = 1500;
-price['otdelka9'] = 1600;
-price['otdelka10'] = 1700;
+price['otdelka6'] = 1;
+price['otdelka7'] = 1;
+price['otdelka8'] = 1;
+price['otdelka9'] = 1;
+price['otdelka10'] = 1;
 // вагонка
 
-price['otdelka11'] = 1800;
+price['otdelka11'] = 1;
 //Шкаф
 
-price['skaf1'] = 1900;
-price['skaf2'] = 2000;
-price['skaf3'] = 2100;
-price['skaf4'] = 22000;
+price['skaf1'] = 1;
+price['skaf2'] = 1;
+price['skaf3'] = 1;
+price['skaf4'] = 1;
 //пол линолеум
 
 
-price['floor1'] = 2300;
-price['floor2'] = 2400;
-price['floor3'] = 2500;
-price['floor4'] = 2600;
-price['floor5'] = 2700;
+price['floor1'] = 1;
+price['floor2'] = 1;
+price['floor3'] = 1;
+price['floor4'] = 1;
+price['floor5'] = 1;
 //пол ламинат
 
 
-price['floor6'] = 2800;
-price['floor7'] = 2900;
-price['floor8'] = 3000;
-price['floor9'] = 3100;
+price['floor6'] = 1;
+price['floor7'] = 1;
+price['floor8'] = 1;
+price['floor9'] = 1;
 //пол доска
 
 
@@ -450,3 +451,89 @@ $('.l_floor .vars div').click(function() {
     l_calc();
 })
 
+
+  $(".v_tel").inputmask("+7 (999) 999-99-99");
+  $(".callback_h_tel").inputmask("+7 (999) 999-99-99");
+
+/*=====================================================
+                      отзывы
+=====================================================*/
+ $(document).ready(function(){
+        $('#otz_carousel').boutique({
+        container_width:800,  
+        front_img_width:164,
+        hovergrowth:0,
+        autoplay: true,
+        autoplay_interval:5000,
+        stop_autoplay_on_click: true,
+        behind_topmargin:80,
+        behind_opacity:1,
+        behind_size:0.7,
+        back_opacity:1,
+        back_size:0.7,
+        back_topmargin:120,
+        });
+      $('#otz_carousel .frame3 img').attr('src','img/otz/'+($('#otz_carousel .frame3 img').attr('id')+'.png'));   
+      $('#otz_carousel .frame3 .otz_prof').removeClass('hide'); 
+      $('#otz_carousel .frame3 .otz_name').css('color','#000');
+      $('.otz .otz1').removeClass('hide');    
+      });
+function pre_move_callback(anchor, instance, framenumber){
+      //  alert('Callback example: Frame '+framenumber+', with the link "'+anchor+'", moved forward (in Boutique with an ID of "'+instance+'").');
+        
+        var len=$("#otz_carousel > li").length/2;
+        
+        for  (var i=1; i<=len; i++){
+          $('#otz_carousel .frame'+i+' img').attr('src','img/otz/'+($('#otz_carousel .frame'+i+' img').attr('id')+'_b.png'));
+          $('#otz_carousel .frame'+i+' .otz_prof').addClass('hide');
+          $('#otz_carousel .frame'+i+' .otz_name').css('color','#999');
+          $('.otz .otz'+i+'').addClass('hide'); 
+        }
+
+      }     
+function move_callback(anchor, instance, framenumber){
+        $('#otz_carousel .frame3 img').attr('src','img/otz/'+($('#otz_carousel .frame3 img').attr('id')+'.png'));
+        $('#otz_carousel .frame3 .otz_prof').removeClass('hide');
+        $('.otz .'+$('#otz_carousel .frame3 img').attr('id')+'').removeClass('hide');
+        $('#otz_carousel .frame3 .otz_name').css('color','#000');
+      }           
+
+/*=====================================================
+                      features
+=====================================================*/
+
+
+$('#features li').hover(function(){
+    $(this).addClass('hovered');
+    $(this).find('.circle').show();
+}, function(){
+    $(this).removeClass('hovered');
+    $(this).find('.circle').hide();
+})
+
+$('.city__btn').on('click', function(){
+    if ($(this).siblings('.city__list').is(':visible')) {
+        $(this).siblings('.city__list').hide();
+    }else{
+        $(this).siblings('.city__list').show();
+    }
+});
+
+$('.city__list li').on('click', function(){
+    $(this).siblings('li').removeClass('selected');
+    $(this).addClass('selected');
+    $('.city__list').hide();
+    checkCity();
+})
+
+function checkCity(){
+    if ($('.city__item.br').hasClass('selected')) {
+        $('.adr__info').removeClass('selected');
+        $('.adr__info.br').addClass('selected');
+        $('.city__btn .name').text('Брянск');
+    }else{
+        $('.adr__info').removeClass('selected');
+        $('.adr__info.kl').addClass('selected');
+        $('.city__btn .name').text('Калуга');
+    }
+}

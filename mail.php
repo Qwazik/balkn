@@ -2,8 +2,8 @@
 $to = "mail@mail.ru";
 $sitename = "Современные балконы";
 
-$name = trim($_POST["name"]);
-$phone = trim($_POST["tel"]);
+$name = trim($_POST["v_name"]);
+$phone = trim($_POST["v_tel"]);
 
 $message = "Имя: $name \nТелефон: $phone";
 $pagetittle = "Новая заявка с \"$sitename\"";

@@ -99,7 +99,7 @@ opacity:1;
 .s10{
 /*	background:url('../images/s2_bg.png') repeat-x;*/
 	
-	padding-top:35px;
+	
 }
 
 
@@ -560,10 +560,10 @@ background: url("../images/y_button.png") no-repeat;
 	position:absolute;
 	background:url('../images/zakaz_vp.png') no-repeat center center;
 	height:133px;
-	width:1180px;
+	width:1125px;
 	background-position:0;
 	top:100px;
-	left:20px;
+	left:36px;
 	
 	
 }
@@ -586,7 +586,7 @@ background: url("../images/y_button.png") no-repeat;
 }
 .s6 .zakaz_vp .btn{
 position: absolute;
-right: 83px;
+right: 30px;
 top: 30px;
 }
 
@@ -630,7 +630,7 @@ cursor: pointer;
 display: inline-block;
 font-size: 25px;
 height: 41px;
-line-height: 1em;
+line-height: 2em;
 overflow: hidden;
 padding-top: 18px;
 text-align: center;
@@ -755,10 +755,7 @@ width:164px;
 
 
 
-.tel{
-	height:80px;
-	float:right;
-}
+
 .tel .call{
 background: url("../images/dots.png") no-repeat scroll 4px bottom rgba(0, 0, 0, 0);
 color: #fbe60b;
@@ -1854,7 +1851,6 @@ text-transform: uppercase;
 .bal_right .sw_block{
 	margin:0 auto;
 	height:220px;
-	background-image: url('../../../../img/temperatura.png');
 	background-position: center 70px;
 	background-repeat: no-repeat;
 
