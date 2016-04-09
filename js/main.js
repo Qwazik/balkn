@@ -421,7 +421,7 @@ $('.l_skaf .vars div').click(function() {
     $('.l_skaf div').removeClass('active');
     $(this).addClass('active');
     var id = $(this).attr('id');
-    otdelka = id;
+    skaf = id;
     $('.l_center .maket_skaf').css('background', 'url("assets/templates/site/images/' + id + '_m.png") no-repeat');
 
     l_calc();
@@ -444,7 +444,7 @@ $('.l_floor .vars div').click(function() {
     $('.l_floor div').removeClass('active');
     $(this).addClass('active');
     var id = $(this).attr('id');
-    otdelka = id;
+    floor = id;
     $('.l_center .maket_floor').css('background', 'url("assets/templates/site/images/' + id + '_m.png") no-repeat');
 
     l_calc();
