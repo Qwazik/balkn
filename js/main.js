@@ -328,7 +328,7 @@ price['floor9'] = 341;
 //пол доска
 
 
-price['floor10'] = 1;
+price['floor10'] = 431;
 var k = 3; //коэффициент 	 //коэффициент
 
 
@@ -336,7 +336,7 @@ function l_calc() {
     var itog = (price[roof] + price[okno] + price[shell] + price[struct] + price[otdelka] + price[skaf] + price[floor]) * k;
     $('.l_price .price').html(itog);
     $('.l_price .rassr span').html(Math.floor(itog / 12));
-    console.log(price[roof] , price[okno] , price[shell] , price[struct] , price[otdelka] , price[skaf] , price[floor]);
+    console.log(price[roof] , price[okno] , price[shell] , price[struct] , price[otdelka] , price[skaf] , price[floor], itog);
 }
 
 l_calc();
