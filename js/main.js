@@ -336,7 +336,7 @@ function l_calc() {
     var itog = (price[roof] + price[okno] + price[shell] + price[struct] + price[otdelka] + price[skaf] + price[floor]) * k;
     $('.l_price .price').html(itog);
     $('.l_price .rassr span').html(Math.floor(itog / 12));
-
+    console.log(price[roof] , price[okno] , price[shell] , price[struct] , price[otdelka] , price[skaf] , price[floor]);
 }
 
 l_calc();
