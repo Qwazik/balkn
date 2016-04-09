@@ -270,61 +270,61 @@ var price = new Object();
 //крыша
 price['roof1'] = 0;
 
-price['roof2'] = 1;
-price['roof3'] = 1;
+price['roof2'] = 111;
+price['roof3'] = 222;
 
 //остекление 
 
-price['okno1'] = 1;
-price['okno2'] = 1;
+price['okno1'] = 333;
+price['okno2'] = 444;
 //обшивка
 price['shell1'] = 0;
-price['shell2'] = 1;
-price['shell3'] = 1;
+price['shell2'] = 555;
+price['shell3'] = 222;
 
 
 //кладка
 price['struct1'] = 0;
-price['struct2'] = 1;
+price['struct2'] = 111;
 //пвх вагонка
 
-price['otdelka1'] = 1;
-price['otdelka2'] = 1;
-price['otdelka3'] = 1;
-price['otdelka4'] = 1;
-price['otdelka5'] = 1;
+price['otdelka1'] = 234;
+price['otdelka2'] = 545;
+price['otdelka3'] = 134;
+price['otdelka4'] = 342;
+price['otdelka5'] = 734;
 //пвх вагонка широкая
 
 
-price['otdelka6'] = 1;
-price['otdelka7'] = 1;
-price['otdelka8'] = 1;
-price['otdelka9'] = 1;
-price['otdelka10'] = 1;
+price['otdelka6'] = 451;
+price['otdelka7'] = 231;
+price['otdelka8'] = 981;
+price['otdelka9'] = 321;
+price['otdelka10'] = 121;
 // вагонка
 
-price['otdelka11'] = 1;
+price['otdelka11'] = 671;
 //Шкаф
 
-price['skaf1'] = 1;
-price['skaf2'] = 1;
-price['skaf3'] = 1;
-price['skaf4'] = 1;
+price['skaf1'] = 0;
+price['skaf2'] = 61;
+price['skaf3'] = 761;
+price['skaf4'] = 71;
 //пол линолеум
 
 
-price['floor1'] = 1;
-price['floor2'] = 1;
-price['floor3'] = 1;
-price['floor4'] = 1;
-price['floor5'] = 1;
+price['floor1'] = 981;
+price['floor2'] = 761;
+price['floor3'] = 341;
+price['floor4'] = 651;
+price['floor5'] = 441;
 //пол ламинат
 
 
-price['floor6'] = 1;
-price['floor7'] = 1;
-price['floor8'] = 1;
-price['floor9'] = 1;
+price['floor6'] = 761;
+price['floor7'] = 451;
+price['floor8'] = 341;
+price['floor9'] = 341;
 //пол доска
 
 
